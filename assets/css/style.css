@@ -1,0 +1,211 @@
+:root{
+    --main-color:#0078FF;
+    --sec-color:#4e4e4e
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p{
+    color: var(--sec-color);
+}
+nav{
+    background-color: rgba(0,0,0,.9);
+}
+nav li{
+    position: relative;
+}
+nav li::after{
+    transition: all .5s;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    left: 20%;
+    background-color: white;
+    opacity: 0;
+}
+nav li:hover::after{
+    opacity: 1;
+}
+
+/* start home */
+.home{
+    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(./../devfolio_images/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment:fixed;
+}
+.home .main-header{
+    font-weight: 600;
+    font-size: 3rem;
+}
+.type-animate{
+    font-size: 2rem;
+
+}
+/* end home */
+/* start about  */
+.about,.services{
+    padding-top: 60px;
+     padding-bottom: 30px;
+    background-color: #F5F5F5;
+}
+.about .title-s{
+    font-weight: 600;
+    font-size: 1.12rem;
+    color: black;
+}
+.about .about-info .title-data{
+    color:  var(--sec-color);
+}
+.bar span{
+    color: var(--sec-color);
+   
+}
+.about .about-me h5{
+    font-size: 2rem;
+}
+.about .title-box-2 h5{
+    position: relative;
+}
+.about .title-box-2 h5::after,.contact h5::after{
+    position: absolute;
+    content: "";
+    top: 44px;
+    left:0;
+    width: 98px;
+    height: 3px;
+    background-color: var(--main-color);
+}
+.about .lead{
+    color: var(--sec-color);
+    line-height: 2rem;
+}
+/* end about */
+/* start services */
+.service-title{
+    font-size: 48px;
+    font-weight: 700;
+}
+.service-header{
+    position: relative;
+}
+.service-header::after,.porto-header::after,.blog-header::after{
+    content: "";
+    position: absolute;
+    background-color:var(--main-color);
+    width: 40px;
+    height: 5px;
+    left: 49%;
+}
+.service-item{
+    background-color: #fff;
+    box-shadow:1px 1px 5px rgba(0, 0, 0, 0.2)
+}
+.service-item .icon {
+    width: 110px;
+    height: 110px;
+    /* background-color: gray; */
+    border: 10px solid var(--main-color);
+    transition: all .5s;
+}
+.service-item:hover .icon{
+    background-color:var(--main-color);
+    border-color: #94c2f6;
+}
+
+/* end services */
+/* statr counter section */
+.counter{
+    background: linear-gradient(rgba(0, 120, 255,.6),rgba(0, 120, 255,.6)),url(./../devfolio_images/counters-bg.jpg);  
+    background-size: cover;
+    height: auto;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 100px;
+   
+}
+.counter-icon .icon{
+    width: 70px;
+    height: 70px;
+    border: 10px solid  white;
+
+}
+/* end counter section */
+/* start portfolio */
+.portfolio{
+    background-color:#F5F5F5 ;
+    padding-block: 60px;
+}
+.portfolio .porto-header{
+    position: relative;
+}
+
+.portfolio .card .inner{
+    overflow: hidden;
+}
+.portfolio  .card img{
+    transition: all 1s;
+}
+.portfolio  .card:hover img{
+    transform: scale(1.3);
+}
+.portfolio  .card .icon{
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--main-color);
+}
+.portfolio  .card-body span{
+    font-size: 12px;
+}
+/* end portfolio */
+/* srtart slider */
+.slider,.contact{
+    background:  linear-gradient( rgba(69, 155, 247, 0.6), rgba(47, 146, 252, 0.6)),url(./../devfolio_images/overlay-bg.jpg);  ;
+    background-size: cover;
+    height: auto;
+    background-position: center;
+    background-attachment: fixed;
+    padding-block: 100px;
+}
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+/* end slider */
+/* start blog */
+.blog{
+    padding-block: 70px;
+}
+.blog-header{
+    position: relative;
+}
+.card-footer img{
+    width: 30px;
+}
+.card .img-layer{
+    padding-inline: 8px;
+    bottom: -5%;
+}
+.card .img-layer p{
+    font-size: 13px;
+}
+.blog h5{
+    transition: all .5s;
+}
+.blog h5:hover{
+    color: var(--main-color);
+}
+/* end blog */
+/* start contact */
+.contact .icons span{
+    width: 40px;
+    height: 40px;
+}
+.contact .icons span:hover{
+    background-color: var(--main-color);
+    border-color: #94c2f6 !important;
+}
+/* end contact */
