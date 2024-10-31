@@ -23,12 +23,18 @@
         background-attachment: scroll;
      }
      nav li a:hover::after{
-        opacity: 0;
+        display: none;
     }
     nav li a{
         transition: all .5s !important;
     }
     nav li a:hover{
+        color: rgb(93, 195, 246) !important;
+    }
+    .navbar-nav .nav-link.active::after{
+        display: none;
+    }
+    .navbar-nav .nav-link.active{
         color: rgb(93, 195, 246) !important;
     }
      
