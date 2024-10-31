@@ -13,19 +13,35 @@ nav{
 }
 nav li{
     position: relative;
-}
-nav li::after{
-    transition: all .5s;
+    overflow: hidden; 
+} 
+nav li a::after{
+    transition: all .3s;
     content: "";
     position: absolute;
-    width: 50%;
-    height: 2px;
-    left: 20%;
+    width: 70%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
     background-color: white;
-    opacity: 0;
+    border: none !important;
+    transform: translate(-120%);
+     
 }
-nav li:hover::after{
-    opacity: 1;
+ 
+nav li a:hover::after{
+    transform: translate(0);
+}
+.navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    border: none !important;
+    transform: translate(0);
 }
 
 /* start home */

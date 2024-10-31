@@ -22,7 +22,7 @@
      .home, .counter,.slider,.contact{
         background-attachment: scroll;
      }
-     nav li:hover::after{
+     nav li a:hover::after{
         opacity: 0;
     }
     nav li a{
